@@ -1,6 +1,6 @@
 
 package test_02;
-
+// Tạo đối tượng tọa độ để lưu vị trí của điểm bắt đầu, xuất phát, vị trí của các thức ăn
 public class ToaDo {
     private String Ten;
     private int x;
@@ -38,11 +38,14 @@ public class ToaDo {
     public void setY(int y) {
         this.y = y;
     }
-    
+    // Hàm tính khoảng cách giữa 2 điểm
     public  int KhoangCach(ToaDo x){
         return (int) Math.sqrt(Math.pow(this.getX() - x.getX(), 2) + Math.pow(this.getY() - x.getY(), 2));
     }
     
+    // Hàm mô tả đường đi của con rắn
+    // -  TH1: Nếu hai điểm // với õ với oy thì đi theo đường thẳng 
+    // -  TH2: Tạo ra 1 điểm trung gian có x = x của điểm xuất phát , y = y của điểm đến => quay lại trường hợp 1 
     public void DuongDi(ToaDo toado){
         
         // trường hợp 1 hai điểm tạo thành đường thẳng // với OY
